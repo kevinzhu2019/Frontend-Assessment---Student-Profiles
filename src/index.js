@@ -52,21 +52,6 @@ import axios from 'axios';
 //   )
 // }
 
-function Search(props) {
-  const [name, setName] = useState('');
-  return (
-    <div className="search">
-      <input 
-        id="name-input"
-        value={name}
-        onChange={event => setName(event.target.value)}
-        placeholder="Search by name"
-      />
-      {/* {name && <h1>Hello, {name}!</h1>} */}
-    </div>
-  )
-}
-
 // function StudentList(props) {
 //   const studentResult = props.student.map(stu => {
 //     let count = 0;
@@ -95,6 +80,7 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <Search /> */}
     <Loading />
+    <Inputs />
   </React.StrictMode>,
   document.getElementById('root')
 );

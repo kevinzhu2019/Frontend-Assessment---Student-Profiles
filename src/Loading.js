@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StudentList from "./StudentList";
+import Search from "./Search";
 
 export default function Loading(props) {
   const [students, setStudents] = useState([]);
@@ -14,7 +15,7 @@ export default function Loading(props) {
   console.log(students);
 
   return (
-    <StudentList 
+    <Search 
       studentPropFromLoading={students}
     />
 
