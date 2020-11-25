@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import Loading from './Loading';
+import Inputs from './Inputs';
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -79,8 +80,8 @@ import axios from 'axios';
 ReactDOM.render(
   <React.StrictMode>
     {/* <Search /> */}
-    <Loading />
     <Inputs />
+    <Loading />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Search(props) {
+export default function Input(props) {
 
   const [term, setTerm] = ("");
 

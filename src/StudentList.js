@@ -2,7 +2,7 @@ import React from "react";
 import StudentsInfo from "./StudentsInfo";
 
 export default function StudentList(props) {
-  const studentResult = props.studentPropFromLoading.map(stu => {
+  const studentResult = props.studentPropFromSearch.map(stu => {
     let count = 0;
     for (let i = 0; i < stu.grades.length; i++) {
       count += Number(stu.grades[i]);
