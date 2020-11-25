@@ -17,6 +17,7 @@ export default function Loading(props) {
   return (
     <Search 
       studentPropFromLoading={students}
+      termPropFromLoading={props.TermPropFromInput}
     />
 
   )

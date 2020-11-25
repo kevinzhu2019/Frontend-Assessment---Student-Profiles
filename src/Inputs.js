@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
+import Loading from "./Loading";
 
 export default function Input(props) {
 
-  const [term, setTerm] = ("");
+  const [term, setTerm] = useState("");
 
   return (
-    <div className="search">
-      <input 
-        id="name-input"
-        value={term}
-        onChange={event => setTerm(event.target.value)}
-        placeholder="Search by name"
+    <Fragment>
+      <div className="search">
+        <input 
+          id="name-input"
+          value={term}
+          onChange={event => setTerm(event.target.value)}
+          placeholder="Search by name"
+        />
+      </div>
+      <Loading 
+        termPropFromInput={term => setTerm(term)}
       />
-      {/* {name && <h1>Hello, {name}!</h1>} */}
-    </div>
+    </Fragment>
   )
 }
