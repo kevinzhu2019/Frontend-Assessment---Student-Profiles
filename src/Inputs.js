@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import Loading from "./Loading";
 
-export default function Input(props) {
+export default function Input() {
 
   const [term, setTerm] = useState("");
 
@@ -16,7 +16,7 @@ export default function Input(props) {
         />
       </div>
       <Loading 
-        termPropFromInput={term => setTerm(term)}
+        termPropFromInput={term}
       />
     </Fragment>
   )

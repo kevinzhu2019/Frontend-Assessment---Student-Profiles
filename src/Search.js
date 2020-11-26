@@ -1,12 +1,23 @@
-import React, {useState, useEffect} from "react";
+import React, { useMemo } from "react";
 import StudentList from "./StudentList";
 
 export default function Search(props) {
-  let massagedStudentList = props.studentPropFromLoading;
+
+  let searchResult = useMemo(() => {
+    let massagedStudentList = props.studentPropFromLoading.filter((item) => {
+      if (item.firstName.toLowerCase().includes(props.termPropFromLoading.toLowerCase()) || item.lastName.toLowerCase().includes(props.termPropFromLoading.toLowerCase())) {
+        return item
+      }
+    })
+    return massagedStudentList;
+  }, [props.termPropFromLoading])
+
+  console.log(searchResult);
+  console.log(props.studentPropFromLoading)
   
   return (
     <StudentList 
-      studentPropFromSearch={massagedStudentList}
+      studentPropFromSearch={(searchResult.length === 0) ? props.studentPropFromLoading : searchResult}
     />
   )
 }
