@@ -10,12 +10,12 @@ export default function Search(props) {
       }
     })
     return massagedStudentList;
-  }, [props.termPropFromLoading])
+  })//Removed the hook dependency since it needs to be re-rendered anyway
 
   console.log(searchResult);
   
   return (
-    <StudentList 
+    <StudentList
       studentPropFromSearch={(searchResult.length === 0) ? props.studentPropFromLoading : searchResult}
     />
   )
