@@ -1,7 +1,7 @@
 import React from "react";
 import "./StudentsInfo.css";
 
-export default function StudentsInfo(props) {
+export default function StudentsInfoFull(props) {
   return (
     <article className="students">
       <div className="studentPhoto">
@@ -22,7 +22,7 @@ export default function StudentsInfo(props) {
           <p className="average">Average: {props.averagePercent}</p>
         </div>
       </div>
-      <button onClick={props.switchToFull}>+</button>
+      <button onClick={props.switchToNormal}>-</button>
     </article>
   )
 }

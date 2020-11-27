@@ -1,9 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
 import * as serviceWorker from './serviceWorker';
-
-import Loading from './Loading';
 import Inputs from './Inputs';
 
 ReactDOM.render(

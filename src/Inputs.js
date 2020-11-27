@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import Loading from "./Loading";
+import "./Inputs.css";
 
 export default function Input() {
 
