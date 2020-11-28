@@ -1,11 +1,10 @@
 div.search {
-  width: 100%;
-  margin-left: 20px;
-  margin-top: 10px;
+  width: 80%;
+  margin: auto;
 }
 
 div.search input {
-  /* border-style: outset; */
+  border-style: outset;
   width: 80%;
 }
 

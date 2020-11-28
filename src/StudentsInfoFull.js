@@ -2,6 +2,15 @@ import React from "react";
 import "./StudentsInfo.css";
 
 export default function StudentsInfoFull(props) {
+
+  const fullTestResult = props.allTestResults.map((result, index) => {
+    return (
+      <li key={index}>
+        {result}
+      </li>
+    )
+  })
+
   return (
     <article className="students">
       <div className="studentPhoto">
@@ -21,8 +30,15 @@ export default function StudentsInfoFull(props) {
           <p className="skill">Skill: {props.skill}</p>
           <p className="average">Average: {props.averagePercent}</p>
         </div>
+        <div className="allTestResult">
+          <ul>
+            {fullTestResult}
+          </ul>
+        </div>
       </div>
-      <button onClick={props.switchToNormal}>-</button>
+      <div className="switchButton">
+        <button onClick={props.switchToNormal}>-</button>
+      </div>
     </article>
   )
 }

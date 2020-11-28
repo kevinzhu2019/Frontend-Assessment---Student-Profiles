@@ -22,7 +22,9 @@ export default function StudentsInfo(props) {
           <p className="average">Average: {props.averagePercent}</p>
         </div>
       </div>
-      <button onClick={props.switchToFull}>+</button>
+      <div className="switchButton">
+        <button onClick={props.switchToFull}>+</button>
+      </div>
     </article>
   )
 }

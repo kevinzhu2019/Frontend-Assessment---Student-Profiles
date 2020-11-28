@@ -13,11 +13,11 @@ code {
 }
 
 article.students {
-  width: 65%;
-  margin-left: 20px;
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   /* border: solid 1px yellow; */
   height: 100%
 }
@@ -27,6 +27,7 @@ div.studentPhoto {
   border: solid 1px grey;
   border-radius: 50%;
   margin-left: 20px;
+  margin-top: 20px;
   /* width: 100%; */
 	height: 100%;
 	/* max-width: 100%; */
@@ -41,10 +42,30 @@ img {
 }
 
 div.studentInfo {
+  width: 90%;
   margin-left: 20px;
+  /* border: solid 1px yellow; */
 }
 
-div.studentInfo div.studentDetail {
+div.studentInfo div.studentDetail, div.allTestResult {
   margin-left: 20px;
   color: grey;
+}
+
+div.allTestResult ul {
+  list-style-type: none;
+}
+
+div.switchButton {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 200px;
+  /* border: solid 1px yellow */
+}
+
+div.switchButton button {
+  font-size: 40px;
+  color: grey;
+  border: none;
+  background: none
 }
