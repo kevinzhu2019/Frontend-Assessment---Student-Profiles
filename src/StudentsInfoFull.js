@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./StudentsInfo.css";
 
 export default function StudentsInfoFull(props) {
+
+  const [tag, setTag] = useState("");
+
+  const submitTag = () => {
+    
+  }
 
   const fullTestResult = props.allTestResults.map((result, index) => {
     return (
@@ -34,6 +40,15 @@ export default function StudentsInfoFull(props) {
           <ul>
             {fullTestResult}
           </ul>
+        </div>
+        <div id="tag">
+          <form className="tagForm">
+            <input id="tag-input" className="add-tag-input" placeholder="Enter tag name"
+              value={tag}
+              onChange={(e) => setTag(e.target.value)}
+              onSubmit={}
+            />
+          </form>
         </div>
       </div>
       <div className="switchButton">

@@ -4,7 +4,7 @@ div.search {
 }
 
 div.search input {
-  border-style: outset;
+  /* border-style: outset; */
   width: 80%;
 }
 

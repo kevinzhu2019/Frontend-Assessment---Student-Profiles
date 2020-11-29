@@ -8,7 +8,7 @@ export default function StudentList(props) {
     let testResult = [];
     for (let i = 0; i < stu.grades.length; i++) {
       count += Number(stu.grades[i]);
-      testResult.push(`Test${i + 1}       ${stu.grades[i]}%`);
+      testResult.push(`Test${i + 1} ${stu.grades[i]}%`);
     }
     let average = (count / stu.grades.length).toFixed(3);
     let averagePercent = average + "%";
