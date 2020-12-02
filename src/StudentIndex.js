@@ -31,6 +31,8 @@ export default function StudentIndex(props) {
         averagePercent={props.averagePercentPropFromStudentList}
         allTestResults={props.allTestResultsPropFromStudentList}
         switchToNormal={() => transition(NORMAL)}
+        tags={props.tagNamesPropFromStudentList}
+        addTags={props.setTagPropFromStudentsList}
         />
       }
     </article>

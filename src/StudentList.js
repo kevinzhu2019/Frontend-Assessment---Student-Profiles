@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import StudentIndex from "./StudentIndex";
 
 export default function StudentList(props) {
+
+  const [tags, setTags] = useState([]);
+
+  const addTags = (tag) => {
+    setTags([...tags, tag]);
+  }
 
   const studentResult = props.studentPropFromSearch.map(stu => {
     let count = 0;
@@ -23,6 +29,8 @@ export default function StudentList(props) {
         skillPropFromStudentList={stu.skill}
         averagePercentPropFromStudentList={averagePercent}
         allTestResultsPropFromStudentList={testResult}
+        tagNamesPropFromStudentList={tags}
+        setTagPropFromStudentsList={addTags}
       />
     )
   })
