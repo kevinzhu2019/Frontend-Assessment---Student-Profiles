@@ -11,6 +11,7 @@ export default function StudentIndex(props) {
   const addTags = (tag) => {
     setTags([...tags, tag]);
   }
+  console.log(tags);
 
   return (
     <article className="studentList">
