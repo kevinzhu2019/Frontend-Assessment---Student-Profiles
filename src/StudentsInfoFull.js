@@ -37,8 +37,8 @@ export default function StudentsInfoFull(props) {
         </div>
         <div id="tag">
           <InputTags
-            addTagsProp={props.addTags}
-            tagProp={props.tags}
+            addTagsPropFromStudentsInfoFull={props.addTagsPropFromStudentIndex}
+            tagPropFromStudentsInfoFull={props.tagsPropFromStudentIndex}
           />
         </div>
       </div>

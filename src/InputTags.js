@@ -8,7 +8,7 @@ export default function InputTags(props) {
     if(e.which === 32) {
       let input = e.target.value.trim();
       if(input.length === 0) return;
-      props.addTagsProp(input);
+      props.addTagsPropFromStudentsInfoFull(input);
       e.target.value = "";
     }
   }
@@ -17,7 +17,7 @@ export default function InputTags(props) {
     <div className="tags">
       <form className="tagForm" >
         <div>
-          <TagList tagNamePropFromInputTags = {props.tagProp} />
+          <TagList tagNamePropFromInputTags = {props.tagPropFromStudentsInfoFull} />
         </div>
         <input id="tag-input" className="add-tag-input" placeholder="Enter tag name"
           onKeyUp={(e) => (onKeyUp(e))} onSubmit={(event) => event.preventDefault()}
