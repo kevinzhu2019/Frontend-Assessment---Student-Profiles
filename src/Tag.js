@@ -3,7 +3,7 @@ import "./Tag.css";
 
 export default function Tag(props) {
   return (
-    <div className="displayTags">
+    <div className="singleTag">
       {props.tagNamePropFromTagList}
     </div>
   )

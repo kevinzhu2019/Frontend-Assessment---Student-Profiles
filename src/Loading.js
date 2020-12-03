@@ -11,13 +11,20 @@ export default function Loading(props) {
     })
   }, [])
 
+  const addTags = (id, tagArray) => {
+    console.log(tagArray);
+    let studentsTemp = [...students];
+    studentsTemp[Number(id) - 1] = {...studentsTemp[Number(id) - 1], tags: tagArray};
+    setStudents(studentsTemp);
+  }
+
   console.log(students);
 
   return (
     <Search 
       studentPropFromLoading={students}
       termPropFromLoading={props.termPropFromInput}
+      addTagsPropFromLoading={addTags}
     />
-
   )
 }

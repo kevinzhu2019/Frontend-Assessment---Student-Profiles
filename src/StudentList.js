@@ -3,7 +3,7 @@ import StudentIndex from "./StudentIndex";
 
 export default function StudentList(props) {
 
-  const studentResult = props.studentPropFromSearch.map(stu => {
+  const studentResult = props.studentPropFromSearchByTag.map(stu => {
     let count = 0;
     let testResult = [];
     for (let i = 0; i < stu.grades.length; i++) {
@@ -14,7 +14,8 @@ export default function StudentList(props) {
     let averagePercent = average + "%";
     return (
       <StudentIndex
-        key={stu.id} 
+        key={stu.id}
+        studentID={stu.id} 
         avatarPropFromStudentList={stu.pic}
         firstNamePropFromStudentList={stu.firstName}
         lastNamePropFromStudentList={stu.lastName}
@@ -23,6 +24,8 @@ export default function StudentList(props) {
         skillPropFromStudentList={stu.skill}
         averagePercentPropFromStudentList={averagePercent}
         allTestResultsPropFromStudentList={testResult}
+        tagsPropFromStudentList={stu.tags}
+        addTagsPropFromStudentList={props.addTagsPropFromSearchByTag}
       />
     )
   })

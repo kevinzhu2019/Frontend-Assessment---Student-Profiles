@@ -8,7 +8,7 @@ export default function InputTags(props) {
     if(e.which === 13) {
       let input = e.target.value.trim();
       if(input.length === 0) return;
-      props.addTagsPropFromStudentsInfoFull(input);
+      props.addTagsPropFromStudentsInfoFull(props.studentIDPropFromStudentInfoFull, input);
       e.target.value = "";
     }
   }
@@ -22,7 +22,7 @@ export default function InputTags(props) {
         <input 
           id="tag-input" 
           className="add-tag-input" 
-          placeholder="Enter tag name"
+          placeholder="Add a tag"
           onKeyUp={(e) => (onKeyUp(e))}
         />
       </form>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./StudentsInfo.css";
 import InputTags from "./InputTags";
 
@@ -10,6 +10,8 @@ export default function StudentsInfoFull(props) {
       </li>
     )
   })
+
+  console.log(props.studentId)
 
   return (
     <article className="students">
@@ -39,6 +41,8 @@ export default function StudentsInfoFull(props) {
           <InputTags
             addTagsPropFromStudentsInfoFull={props.addTagsPropFromStudentIndex}
             tagPropFromStudentsInfoFull={props.tagsPropFromStudentIndex}
+            studentIDPropFromStudentInfoFull={props.studentIdPropFromStudentIndex}
+            setStudentsPropFromStudentInfoFull={props.setTagsPropFromStudentIndex}
           />
         </div>
       </div>

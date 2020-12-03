@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import StudentsInfo from "./StudentsInfo";
 import StudentsInfoFull from "./StudentsInfoFull";
 import useVisualMode from "./useVisualMode";
@@ -8,10 +8,14 @@ export default function StudentIndex(props) {
   const FULL = "FULL";
   const { mode, transition } = useVisualMode(NORMAL);
   const [tags, setTags] = useState([]);
-  const addTags = (tag) => {
+  const addTags = (studentID, tag) => {
     setTags([...tags, tag]);
   }
-  console.log(tags);
+
+  useEffect(() => {
+    console.log("this is tags:",tags);
+    props.addTagsPropFromStudentList(props.studentID, tags);
+  }, [tags])
 
   return (
     <article className="studentList">
@@ -27,6 +31,7 @@ export default function StudentIndex(props) {
         />
       }
       {mode === FULL && <StudentsInfoFull
+        studentIdPropFromStudentIndex={props.studentID}
         avatar={props.avatarPropFromStudentList}
         firstName={props.firstNamePropFromStudentList}
         lastName={props.lastNamePropFromStudentList}
@@ -38,6 +43,7 @@ export default function StudentIndex(props) {
         switchToNormal={() => transition(NORMAL)}
         tagsPropFromStudentIndex={tags}
         addTagsPropFromStudentIndex={addTags}
+        setTagsPropFromStudentIndex={props.addTagsPropFromStudentList}
         />
       }
     </article>

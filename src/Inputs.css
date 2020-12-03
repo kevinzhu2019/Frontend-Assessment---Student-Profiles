@@ -1,9 +1,14 @@
-div.search {
+div.search, div.searchTag {
   width: 80%;
   margin: auto;
 }
 
 div.search input {
+  /* border-style: outset; */
+  width: 80%;
+}
+
+div.searchTag input {
   /* border-style: outset; */
   width: 80%;
 }

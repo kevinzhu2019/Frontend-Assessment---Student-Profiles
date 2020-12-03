@@ -1,4 +1,9 @@
-div.displayTags {
-  border: solid 1px yellow;
-  width: 15%;
+div.singleTag {
+  border: solid 1px grey;
+  display: inline-block;
+  background: grey;
+  font: 0.9em;
+  margin: 5px;
+  /* border: "1px solid lightblue", */
+  padding: 2px,
 }

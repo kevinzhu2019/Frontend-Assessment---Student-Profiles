@@ -5,6 +5,7 @@ import "./Inputs.css";
 export default function Input() {
 
   const [term, setTerm] = useState("");
+  const [tagterm, setTagterm] = useState("");
 
   return (
     <Fragment>
@@ -16,8 +17,16 @@ export default function Input() {
           placeholder="Search by name"
         />
       </div>
+      <div className="searchTag">
+        <input 
+          value={tagterm}
+          onChange={e => setTagterm(e.target.value)}
+          placeholder="Search by tag"
+        />
+      </div>
       <Loading 
         termPropFromInput={term}
+        tagtermPropFromTagInput={tagterm}
       />
     </Fragment>
   )

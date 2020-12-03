@@ -1,5 +1,6 @@
 import React from "react";
-import StudentList from "./StudentList";
+import SearchByTag from "./SearchByTag";
+// import StudentList from "./StudentList";
 
 export default function Search(props) {
 
@@ -11,8 +12,12 @@ export default function Search(props) {
   })
   
   return (
-    <StudentList
+    // <StudentList
+    //   studentPropFromSearch={(filteredStudentList.length === 0) ? props.studentPropFromLoading : filteredStudentList}
+    // />
+    <SearchByTag
       studentPropFromSearch={(filteredStudentList.length === 0) ? props.studentPropFromLoading : filteredStudentList}
+      addTagsPropFromSearch={props.addTagsPropFromLoading}
     />
   )
 }
