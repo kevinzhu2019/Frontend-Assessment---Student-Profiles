@@ -1,9 +1,9 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useMemo } from "react";
 import StudentList from "./StudentList"
 
 export default function SearchByTag(props) {
 
-  console.log(props.studentPropFromSearch);
+  // console.log(props.studentPropFromSearch);
   let studentsWithTag = useMemo(() => {
     let studentsWithTag = props.studentPropFromSearch.filter((item) => {
       if(item.hasOwnProperty("tags") && item.tags.length !== 0) {
@@ -13,7 +13,7 @@ export default function SearchByTag(props) {
     return studentsWithTag;
   },[props.studentPropFromSearch])
 
-  console.log("studentsWithTag:", studentsWithTag);
+  // console.log("studentsWithTag:", studentsWithTag);
 
   let tagSearchResult = useMemo(() => {
     let tagSearchResult = studentsWithTag.filter((item) => {
