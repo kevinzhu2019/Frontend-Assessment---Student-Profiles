@@ -18,6 +18,7 @@ export default function Search(props) {
     <SearchByTag
       studentPropFromSearch={(filteredStudentList.length === 0) ? props.studentPropFromLoading : filteredStudentList}
       addTagsPropFromSearch={props.addTagsPropFromLoading}
+      tagTermPropFromSearch={props.tagTermPropFromLoading}
     />
   )
 }

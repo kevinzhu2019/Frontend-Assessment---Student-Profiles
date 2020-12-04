@@ -11,8 +11,6 @@ export default function StudentsInfoFull(props) {
     )
   })
 
-  console.log(props.studentId)
-
   return (
     <article className="students">
       <div className="studentPhoto">

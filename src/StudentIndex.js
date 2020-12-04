@@ -8,12 +8,12 @@ export default function StudentIndex(props) {
   const FULL = "FULL";
   const { mode, transition } = useVisualMode(NORMAL);
   const [tags, setTags] = useState([]);
-  const addTags = (studentID, tag) => {
+  const addTags = (tag) => {
     setTags([...tags, tag]);
   }
 
   useEffect(() => {
-    console.log("this is tags:",tags);
+    // console.log("this is tags:",tags);
     props.addTagsPropFromStudentList(props.studentID, tags);
   }, [tags])
 

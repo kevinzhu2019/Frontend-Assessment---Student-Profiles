@@ -8,7 +8,7 @@ export default function InputTags(props) {
     if(e.which === 13) {
       let input = e.target.value.trim();
       if(input.length === 0) return;
-      props.addTagsPropFromStudentsInfoFull(props.studentIDPropFromStudentInfoFull, input);
+      props.addTagsPropFromStudentsInfoFull(input);
       e.target.value = "";
     }
   }

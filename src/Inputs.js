@@ -14,7 +14,7 @@ export default function Input() {
           id="name-input"
           value={term}
           onChange={event => setTerm(event.target.value)}
-          placeholder="Search by name"
+          placeholder="Search by name(Warning: search by name may remove tags)"
         />
       </div>
       <div className="searchTag">
